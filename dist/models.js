@@ -1,0 +1,1 @@
+(function(){var e,o,t;t=require("mongoose"),e=t.Schema({date:{type:Date,"default":Date.now},isLogged:{type:Boolean,"default":!0}}),o=t.Schema({nome:String,mac_address:{type:String,unique:!0},log_history:[{type:t.Schema.Types.ObjectId,ref:"Record"}]}),module.exports.User=t.model("User",o),module.exports.Record=t.model("Record",e)}).call(this);
