@@ -18,7 +18,7 @@ findChanges = ->
         for user in users
           for status in routerStatus
             if user.mac_address is status.mac_address
-              ((user, status)-> #using this closure to copy the values.
+              ((user, status)-> #using this as a closure to copy the values.
                 if user.log_history.length < 1
                   record = new Record({})
                   record.save().then ->
